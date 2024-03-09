@@ -1,0 +1,58 @@
+{
+  "name": "@rauschma/nodejs-tools",
+  "version": "0.1.0",
+  "type": "module",
+  "author": "Axel Rauschmayer",
+  "repository": "github:rauschma/nodejs-tools",
+  "license": "MIT",
+  "exports": {
+    "./*": "./dist/src/*"
+  },
+  "// files": [
+    "We can jump to TS source code, thanks to declarationMap:true in tsconfig.json",
+    "Example:",
+    "dist/src/event.js",
+    "dist/src/event.js.map",
+    "dist/src/event.d.ts",
+    "dist/src/event.d.ts.map",
+    "src/event.ts"
+  ],
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "src/**/*.ts",
+    "!dist/**/*_test.js",
+    "!dist/**/*_test.js.map",
+    "!dist/**/*_test.d.ts",
+    "!dist/**/*_test.d.ts.map",
+    "!src/**/*_test.ts"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "watch": "tsc --watch",
+    "clean": "shx rm -rf ./dist/*",
+    "\n========== Testing ==========": "",
+    "test": "mocha --enable-source-maps --ui qunit",
+    "testall": "mocha --enable-source-maps --ui qunit \"./dist/**/*_test.js\"",
+    "\n========== Publishing ==========": "",
+    "dry-run": "npm publish --dry-run",
+    "prepublishOnly": "npm run build",
+    "pack": "npm pack && tar --list --file rauschma-nodejs-tools-*.tgz"
+  },
+  "dependencies": {
+    "@rauschma/helpers": "^0.1.0",
+    "memfs": "^4.6.0",
+    "quibble": "^0.9.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.6",
+    "mocha": "^10.2.0",
+    "shx": "^0.3.4"
+  }
+}
