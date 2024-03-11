@@ -42,7 +42,7 @@
     "\n========== Publishing ==========": "",
     "dry-run": "npm publish --dry-run",
     "prepublishOnly": "npm run build",
-    "pack": "npm pack && tar --list --file rauschma-nodejs-tools-*.tgz"
+    "pack": "rm -f rauschma-nodejs-tools-*.tgz && npm pack && tar --list --file rauschma-nodejs-tools-*.tgz | sort"
   },
   "dependencies": {
     "@rauschma/helpers": "^0.1.0",
