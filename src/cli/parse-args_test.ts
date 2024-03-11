@@ -1,6 +1,6 @@
 import { createSuite } from '@rauschma/helpers/testing/mocha.js';
+import { parseSubcommand } from '@rauschma/nodejs-tools/cli/parse-args.js';
 import assert from 'node:assert/strict';
-import { parseSubcommand } from './parse-args.js';
 
 createSuite(import.meta.url);
 

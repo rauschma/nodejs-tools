@@ -1,6 +1,6 @@
 import { createSuite } from '@rauschma/helpers/testing/mocha.js';
+import { style } from '@rauschma/nodejs-tools/cli/text-style.js';
 import assert from 'node:assert/strict';
-import { style } from './text-style.js';
 
 createSuite(import.meta.url);
 

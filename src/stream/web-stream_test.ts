@@ -1,7 +1,7 @@
 import { arrayFromAsync } from '@rauschma/helpers/async/async-iteration.js';
 import { createSuite } from '@rauschma/helpers/testing/mocha.js';
+import { ChunksToLinesStream, iterableToReadableStream, readableStreamToAsyncIterable } from '@rauschma/nodejs-tools/stream/web-stream.js';
 import assert from 'node:assert/strict';
-import { ChunksToLinesStream, iterableToReadableStream, readableStreamToAsyncIterable } from './web-stream.js';
 
 createSuite(import.meta.url);
 
