@@ -1,6 +1,6 @@
 {
   "name": "@rauschma/nodejs-tools",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "author": "Axel Rauschmayer",
   "repository": "github:rauschma/nodejs-tools",
@@ -42,7 +42,7 @@
     "\n========== Publishing ==========": "",
     "dry-run": "npm publish --dry-run",
     "prepublishOnly": "npm run build",
-    "pack": "rm -f rauschma-nodejs-tools-*.tgz && npm pack && tar --list --file rauschma-nodejs-tools-*.tgz | sort"
+    "pack": "npm pack && (tar --list --file rauschma-nodejs-tools-*.tgz | sort) && rm -f rauschma-nodejs-tools-*.tgz"
   },
   "dependencies": {
     "@rauschma/helpers": "^0.1.0",
